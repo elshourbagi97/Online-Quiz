@@ -1,0 +1,15 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(248, 248, 248);
+}
+div{
+    width: 50%;
+    height:100%;
+margin: auto;
+translate: 0px 60px;
+    background-image: url("https://cdn.dribbble.com/users/39201/screenshots/3694057/nutmeg.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+}

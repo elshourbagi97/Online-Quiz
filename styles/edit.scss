@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://wallpaperaccess.com/full/3308628.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+section {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.705);
+  z-index: 1;
+  position: relative;
+ .nav1{
+    width: 100%;
+    height: 9%;
+    padding: 8px 10px;
+    background-color: rgba(30, 30, 30, 0.692);
+    position: relative;
+    li{
+        font-size: 16px;
+        .logoAnchor{
+          text-decoration: none;
+          color: white;
+        }
+        h2{
+            font-size:25px ;
+            padding:6px 0;
+        }
+        .logo{
+            width: 50px;
+            height: 50px;
+            background-image: url("../Choose.gif");
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 30px;
+        }
+        .quiz{
+           color: blue;
+           border-radius: 5px;
+           border-bottom: 2px solid rgb(0, 38, 255);
+        }
+        .home,.logout {
+            color: rgb(111, 108, 103);
+            margin: 0 10px;
+            border-bottom: 2px solid transparent;
+            border-radius: 5px;
+            &:hover{
+                color: white;
+                border-bottom: 2px solid white;
+            }
+            &:focus{
+                color:red;
+                border-bottom: 2px solid red;
+            }
+        }
+        .logout{
+         position: absolute;
+         top: 10px;
+         right: 25px;
+        }
+    }
+ }
+ .mainBody{
+    width: 70%;
+    height: 85%;
+    margin: 20px auto 0px ;
+    padding: 20px 20px 0;
+    border-radius: 20px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.705);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   .Add{
+     width: 100%;
+     margin: 10px 0px 5px ;
+     text-align: end;
+     .error {
+      text-align: center;
+       width: 26%; 
+       padding: 5px 5px ;
+       border: 1px solid #a94442; 
+       color: #a94442; 
+       background: #f2dede; 
+       border-radius: 5px;
+       position: absolute;
+       z-index: 6;
+        translate: 80% -40%;
+       p{
+         font-size: 14px;
+         font-weight: 500;
+        }
+      }
+  }
+}
+}
+#Questions{
+  display: flex;
+  // display: none;
+  z-index: 7;
+  background-color:rgba(0, 0, 0, 0.749) ;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+
+.question{
+  position: relative;
+  background-color: white;
+  width: 45%;
+  height: 85%;
+  border-radius: 15px;
+  h2{
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    width: fit-content;
+    margin: 10px;
+  }
+  .line{
+    margin: 20px auto 0px;
+    width:98%;
+    height:1px ;
+    background-color: rgb(178, 175, 175);
+  }
+  form{
+   .form-group{
+     text-align: start !important;
+     margin: 5px 0px;
+     label{
+      margin: 5px 0px;
+      font-size: 17px;
+     }
+  }
+  }
+  .btnX{
+    position: absolute;
+    top: 8px;
+    right: 5px;
+  }
+}
+}
