@@ -7,7 +7,7 @@
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/87548e5234.js" crossorigin="anonymous"></script>
     <title>Online Quiz</title>
-    <link rel="stylesheet" href="./styles/quiz.scss">
+    <link rel="stylesheet" href="../../../../styles/quiz.scss">
 
 </head>
 <body>
@@ -31,7 +31,7 @@
         <div class="Add">
                 <button type="button" class="btn btn1 btn-dark" id="btn-question" title="Add Questions">Add Questions</button>
                 <button type="button" class="btn btn1 btn-dark" id="show-quiz" title="Add Questions"> view Quiz</button>
-                <?php require_once "errors.php" ?>
+                <?php require_once "../../../../errors/errors.php" ?>
                 <div id="Questions">
                     <div class="question container">
                         <h2 class="text-success">Add Question :</h2>
@@ -73,7 +73,7 @@
                         <div class="line"></div>
                         <button class="btn btn-danger" id="btnX2" title="Exit"><i class="fa-solid fa-x"></i></button>
                      <?php
-                        require_once "db.php";
+                        require_once "../../../../db/db.php";
                         $select="SELECT * from tb_quiz";
                         if($result=$conn->query($select)){
                           while($row=$result->fetch_assoc()){
@@ -114,7 +114,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    require "db.php";
+                    require "../../../../db/db.php";
                     $select="SELECT * FROM tb_quiz";
                     if($result=$conn->query($select)){
                         while($row=$result->fetch_assoc()){
