@@ -74,7 +74,7 @@
                         <button class="btn btn-danger" id="btnX2" title="Exit"><i class="fa-solid fa-x"></i></button>
                      <?php
                         require_once "../../../../db/db.php";
-                        $select="SELECT * from tb_quiz";
+                        $select="SELECT * from tb_quiz"; 
                         if($result=$conn->query($select)){
                           while($row=$result->fetch_assoc()){
                              $id=$row['quiz_id'];
