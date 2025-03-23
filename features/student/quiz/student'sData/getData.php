@@ -7,11 +7,11 @@
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/87548e5234.js" crossorigin="anonymous"></script>
     <title>Online Quiz</title>
-    <link rel="stylesheet" href="./styles/your_quiz.scss">
+    <link rel="stylesheet" href="../../../../styles/your_quiz.scss">
 
 </head>
 <body>
-    <section>
+    <section class="height">
         <ul class="nav nav1 nav-underline">
             <li class="nav-item"><a href="student.php" class="logoAnchor" title="Home"><h2>Online Quiz System</h2></a></li>
             <li class="nav-item"><div class="logo"></div></li>
@@ -26,7 +26,7 @@
         <div class="main">
             <form method="post" action="your_quiz.php">
                <?php
-                require_once "db.php";
+                require_once "../../../../db/db.php";
                 $select="SELECT * from tb_quiz";
                 if($result=$conn->query($select)){
                     while($row=$result->fetch_assoc()){
@@ -54,7 +54,7 @@
             </form>
         </div>
         <div id ="res" >
-        <?php require_once "errors.php" ?>
+        <?php require_once "../../../../errors/errors.php" ?>
             <?php 
             if(isset($_GET['score'])){
                 $score=$_GET['score'];
@@ -63,7 +63,7 @@
           <div class="Result">
              <h3 class="text-success">Result :</h3>
             <div class="line"></div>
-            <form action ="submit.php?score=<?php echo $score ?>" method="post">
+            <form action ="../submit/submit.php?score=<?php echo $score ?>" method="post">
                 <div class="form-group">
                     <label> Your Fullname :</label>
                     <input type="text"  name="name"class="form-control">
@@ -84,5 +84,5 @@
         </div>
     </section>
 </body>
-<script src="./submit.js"></script>
+<script src="../../../../js/submit.js"></script>
 </html>

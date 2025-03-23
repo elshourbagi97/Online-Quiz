@@ -1,12 +1,12 @@
 <?php
-require "db.php";
-    $id=$_GET['id'];
+    require "../../../../db/db.php";
+        $id=$_GET['id'];
     $delete="DELETE FROM tb_quiz WHERE quiz_id='$id'";
     if($conn->query($delete)){
-        header('location: quiz.php');
+        header('location: ../view/quiz.php');
     }else
     {
-        echo "there ia an error in deleteing";
+        echo "there ia an error in deleting";
     }
 
  ?>

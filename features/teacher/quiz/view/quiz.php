@@ -13,11 +13,11 @@
 <body>
     <section id='section'>
         <ul class="nav nav1 nav-underline">
-            <li class="nav-item"><a href="teacher.php" class="logoAnchor" title="Home"><h2>Online Quiz System</h2></a></li>
+            <li class="nav-item"><a href="../../teacher.php" class="logoAnchor" title="Home"><h2>Online Quiz System</h2></a></li>
             <li class="nav-item"><div class="logo"></div></li>
-            <li class="nav-item"><a  class="nav-link home " href="teacher.php" title="Home"> Home</a></li>
+            <li class="nav-item"><a  class="nav-link home " href="../../teacher.php" title="Home"> Home</a></li>
             <li class="nav-item"><a  class="nav-link  quiz" href="quiz.php" title="Quiz"> Quiz</a></li>
-            <li class="nav-item"><a  class="nav-link logout" href="index.php" title="Log Out"> Log Out</a></li>
+            <li class="nav-item"><a  class="nav-link logout" href="../../../../index.php" title="Log Out"> Log Out</a></li>
         </ul>
        <div class="mainBody">   
         <ul class="nav nav2 nav-tabs">
@@ -25,7 +25,7 @@
                 <a class="nav-link active" aria-current="page" href="quiz.php" title="Questions">Questions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link res" href="result.php" title="Result">Result</a>
+                <a class="nav-link res" href="../../result/result.php" title="/Result">Result</a>
             </li>
          </ul>
         <div class="Add">
@@ -37,7 +37,7 @@
                         <h2 class="text-success">Add Question :</h2>
                         <div class="line"></div>
                         <button class="btn btn-danger" id="btnX" title="Exit"><i class="fa-solid fa-x"></i></button>
-                        <form action="add_question.php" method="post">
+                        <form action="../create/Add_question.php" method="post">
                            <div class="form-group">
                                 <label class="text-secondary" >Question</label>
                                 <input type="text"  class="form-control" name="question">
@@ -93,7 +93,7 @@
                                  <li><?php echo $op4?> .</li>
                               </ul>
                               <h6>Answer :</h6>
-                              <input type="letter" class="form-control"value="<?php echo $ans1 ?>" max-length="1" >
+                              <input type="text" readonly class="form-control"value="<?php echo $ans1 ?>" max-length="1" >
                       <?php
                              }
                          }
@@ -127,8 +127,8 @@
                                 <td style="text-transform: capitalize;"><?php echo $question ?></td>
                                 <td style="translate:40px 0px; text-transform: uppercase;"><?php echo $ans ?></td>
                                 <td style="translate:-15px 0px;">
-                                    <a href="edit.php?id=<?php echo $id?>" class="btn btn-outline-success" title="Edit"><i class="fa-solid fa-pencil"></i></a>
-                                    <a href="delete.php?id=<?php echo $id?>" class="btn btn-outline-danger" title="Delete"><i class="fa-solid fa-trash"></i></a>
+                                    <a href="../modify/edit.php?id=<?php echo $id?>" class="btn btn-outline-success" title="Edit"><i class="fa-solid fa-pencil"></i></a>
+                                    <a href="../delete/delete.php?id=<?php echo $id?>" class="btn btn-outline-danger" title="Delete"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                     <?php
@@ -141,5 +141,5 @@
     </section>
 </body>
 
-<script src="./quiz.js"></script>
+<script src="../../../../assets/js/quiz.js"></script>
 </html>

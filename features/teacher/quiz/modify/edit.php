@@ -1,5 +1,5 @@
 <?php
-    require_once "db.php";
+    require "../../../../db/db.php";
     session_start(); 
     $errors=array();
     $Letters=['a','A','b','B','c','C','d','D'];
@@ -16,12 +16,12 @@ if(!in_array($correctAns,$Letters)){array_push($errors,"Error, Please enter in t
     $update= "UPDATE tb_quiz set question='$question' , option1='$op1' , option2='$op2' ,
      option3='$op3' , option4='$op4' , correct_Ans='$correctAns' where quiz_id='$id' ";
         if(mysqli_query($conn,$update)){
-            header('location: quiz.php');
+            header('location: ../view/quiz.php');
             exit();
          }
      }else{
         $_SESSION['errors']=$errors;
-        header('location: quiz.php');
+        header('location: ../view/quiz.php');
         exit();
      }
     
@@ -36,26 +36,26 @@ if(!in_array($correctAns,$Letters)){array_push($errors,"Error, Please enter in t
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/87548e5234.js" crossorigin="anonymous"></script>
     <title>Online Quiz</title>
-    <link rel="stylesheet" href="./styles/edit.scss">
+    <link rel="stylesheet" href="../../../../styles/edit.scss">
 
 </head>
 <body>
     <section>
         <ul class="nav nav1 nav-underline">
-        <li class="nav-item"><a href="teacher.php" class="logoAnchor" title="Home"><h2>Online Quiz System</h2></a></li>
+        <li class="nav-item"><a href="../../teacher.php" class="logoAnchor" title="Home"><h2>Online Quiz System</h2></a></li>
         <li class="nav-item"><div class="logo"></div></li>
-            <li class="nav-item"><a  class="nav-link home " href="teacher.php" > Home</a></li>
+            <li class="nav-item"><a  class="nav-link home " href="../../teacher.php" > Home</a></li>
             <li class="nav-item"><a  class="nav-link  quiz" href="quiz.php"> Quiz</a></li>
-            <li class="nav-item"><a  class="nav-link logout" href="index.php"> Log Out</a></li>
+            <li class="nav-item"><a  class="nav-link logout" href="../../../../index.php"> Log Out</a></li>
         </ul>
        <div class="mainBody">   
             <div class="Add">
-                <?php require_once "errors.php" ?>
+                <?php require_once "../../../../errors/errors.php" ?>
                 <div id="Questions">
                     <div class="question container">
                         <h2 class="text-success"> Edit Question :</h2>
                         <div class="line"></div>
-                        <a class="btn btnX btn-danger" href="quiz.php" title="Exit"><i class="fa-solid fa-x"></i></a>
+                        <a class="btn btnX btn-danger" href="../view/quiz.php" title="Exit"><i class="fa-solid fa-x"></i></a>
                         <?php
                         if(isset($_GET['id'])){
                             $id=$_GET['id'];
@@ -99,7 +99,7 @@ if(!in_array($correctAns,$Letters)){array_push($errors,"Error, Please enter in t
                                 <label class="text-secondary" >Correct Answer (Letter Only)</label>
                                 <input type="text" value="<?php echo $ans ?>" class="form-control"maxlength="1" style="text-transform: uppercase;" name="CorrectAns">
                            </div>
-                           <a href="quiz.php" class="btn btnClose btn-secondary" title="Close">Close</a>
+                           <a href="../view/quiz.php" class="btn btnClose btn-secondary" title="Close">Close</a>
                            <input type="submit" class="btn btn-success" title="Save Questions" name="Save" value="Save Question"></input>
                         </form>
                     </div>

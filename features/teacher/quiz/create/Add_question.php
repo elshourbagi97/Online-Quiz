@@ -3,7 +3,7 @@ session_start();
      $errors=array();
      $Answer=['a','A','b','B','c','C','d','D'];
      if(isset($_POST['Save'])){
-        require "db.php";
+        require "../../../../db/db.php";
     $question=mysqli_real_escape_string($conn,$_POST['question']);
     $op1=mysqli_real_escape_string($conn,$_POST['Option1']);
     $op2=mysqli_real_escape_string($conn,$_POST['Option2']);
@@ -25,13 +25,13 @@ session_start();
     $insert="INSERT INTO tb_quiz (question,option1,option2,option3,option4,correct_Ans)
     VALUES ('$question','$op1','$op2','$op3','$op4','$correctAns')";
     if(mysqli_query($conn,$insert)){
-        header('location: quiz.php');
+        header('location: ../view/quiz.php');
         exit();
     }
     
 }else{
     $_SESSION['errors'] = $errors;  
-    header('location: quiz.php');
+    header('location: ../view/quiz.php');
     exit();
 }
 }
