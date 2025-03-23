@@ -15,8 +15,8 @@
         <div class="borderLine"></div>
         <div class="select">
           <h3>Select user type</h3>
-          <a href="student.php" title="Student" class="btn btn-outline-secondary">Student</a>
-          <a href="teacher.php" title="Teacher" class="btn btn-outline-secondary">Teacher</a>
+          <a href="./features/student/student.php" title="Student" class="btn btn-outline-secondary">Student</a>
+          <a href="./features/teacher/teacher.php" title="Teacher" class="btn btn-outline-secondary">Teacher</a>
         </div>
 
     </section>

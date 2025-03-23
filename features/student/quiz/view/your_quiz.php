@@ -1,5 +1,5 @@
 <?php
- require_once "db.php";
+ require_once "../../../../db/db.php";
   $score=0;
  if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(isset($_POST['answer']) && !empty($_POST['answer'])){
@@ -14,7 +14,7 @@
                 }
             }
         }
-        header("location: getData.php?score=$score" );
+        header("location: ../student'sData/getData.php?score=$score" );
         exit();
     }
  
@@ -29,17 +29,17 @@
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/87548e5234.js" crossorigin="anonymous"></script>
     <title>Online Quiz</title>
-    <link rel="stylesheet" href="./styles/your_quiz.scss">
+    <link rel="stylesheet" href="../../../../styles/your_quiz.scss">
 
 </head>
 <body>
     <section>
         <ul class="nav nav1 nav-underline">
-            <li class="nav-item"><a href="student.php" class="logoAnchor" title="Home"><h2>Online Quiz System</h2></a></li>
+            <li class="nav-item"><a href="../../student.php" class="logoAnchor" title="Home"><h2>Online Quiz System</h2></a></li>
             <li class="nav-item"><div class="logo"></div></li>
-            <li class="nav-item"><a  class="nav-link quiz " href="student.php"  title="Home"> Home</a></li>
+            <li class="nav-item"><a  class="nav-link quiz " href="../../student.php"  title="Home"> Home</a></li>
             <li class="nav-item"><a  class="nav-link  home" href="your_quiz.php"  title="Quiz">Your Quiz</a></li>
-            <li class="nav-item"><a  class="nav-link logout" href="index.php"  title="Log Out"> Log Out</a></li>
+            <li class="nav-item"><a  class="nav-link logout" href="../../../../index.php"  title="Log Out"> Log Out</a></li>
         </ul>
         <div class="header">
             <h1>Multiple Choice!!</h1>
@@ -48,7 +48,7 @@
         <div class="main">
             <form method="post" action="your_quiz.php">
             <?php
-                require_once "db.php";
+                require_once "../../../../db/db.php";
                 $select="SELECT * from tb_quiz";
                 if($result=$conn->query($select)){
                     while($row=$result->fetch_assoc()){
@@ -78,6 +78,7 @@
             </div>
            </form>
         </div>
+        <div style='height:33.5px'></div>
     </section>
 </body>
 </html>

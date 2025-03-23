@@ -31,7 +31,7 @@ show_quiz.onclick=()=>{
  btnX2.onclick=()=>{
             quiz.style.display="none";
             table.style.visibility="visible"
-            section.style.height = "100%"; 
+            section.style.height = "fit-content"; 
             }   
  OK.onclick=()=>{
                 quiz.style.display="none";
