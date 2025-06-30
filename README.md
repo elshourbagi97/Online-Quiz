@@ -1,6 +1,51 @@
-<h1>These is quiz online project : </h1>
-<p>These project from Teachers and student by using some skills as: PHP , SCCS , CSS , JS and PhpMyAdmin(MYSQL)</p>
-<h3> As teachers :</h3>
-<p>Can add Quizes , updating it as (editing or deleting) and view his/her quiz after finishing before add to the students and after that he/she can these the results of his/her student after submit them exam and see at what excatly time quiz taken </p>
-<h3>And for students :</h3>
-<p>they can take them exam w and submit it by put his/her name , section or classroom and see his/her score </p>
+# 🧠 Online Quiz System (PHP + MySQL)
+
+A full-featured online quiz platform designed for teachers and students. Built with PHP and MySQL, this system allows teachers to manage quizzes and track student performance, while students can take quizzes and receive scores immediately.
+
+---
+
+## 📋 Project Overview
+
+This project serves as an **online quiz application** for educational use, where teachers can create and manage exams, and students can take them directly in the browser.
+
+Developed using:
+- PHP
+- SCSS / CSS
+- JavaScript
+- PhpMyAdmin (MySQL)
+
+---
+
+## 👩‍🏫 Features for Teachers
+
+- ➕ Create new quizzes with custom questions
+- ✏️ Edit or delete existing quizzes
+- 👁️ Preview the quiz before assigning to students
+- 📊 View student submissions and quiz results
+- 🕒 Track the exact time when each student completed a quiz
+
+---
+
+## 👨‍🎓 Features for Students
+
+- 🧾 Enter name, section, or class before starting the quiz
+- 📝 Take quizzes with multiple-choice questions
+- 📈 View score immediately after submission
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend**: PHP
+- **Database**: MySQL (via PhpMyAdmin)
+- **Frontend**: HTML5, CSS3, SCSS, JavaScript , BootStrap
+- **Environment**: XAMPP or similar Apache-MySQL setup
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/elshourbagi97/Online-Quiz.git
